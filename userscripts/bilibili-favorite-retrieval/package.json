@@ -1,0 +1,8 @@
+{
+  "name": "bilibili-favorite-retrieval",
+  "main": "index.js",
+  "devDependencies": {
+    "webpack": "^4.41.6",
+    "webpack-userscript": "^2.5.1"
+  }
+}

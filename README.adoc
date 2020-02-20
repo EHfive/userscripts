@@ -1,0 +1,22 @@
+= userscripts
+Huang-Huang Bao <eh5@sokka.cn>
+
+Ehfive's userscripts monorepo
+
+== Hacking
+
+TIP: This project using `link:https://github.com/yarnpkg/berry[yarn@berry]`
+
+Install latest yarn v1 or v2 globally
+----
+$ # using package manager (apt, pacman, homebrew, .etc)
+$ apt-get install yarn
+
+$ # using npm
+$
+----
+
+Run `yarn`
+----
+$ yarn
+----

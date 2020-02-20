@@ -1,0 +1,11 @@
+{
+  "name": "userscripts",
+  "version": "1.0.0",
+  "author": "Huang-Huang Bao <eh5@sokka.cn>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "userscripts/*"
+  ]
+}
