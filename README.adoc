@@ -7,16 +7,20 @@ Ehfive's userscripts monorepo
 
 TIP: This project using `link:https://github.com/yarnpkg/berry[yarn@berry]`
 
-Install latest yarn v1 or v2 globally
+Install latest yarn v1 or v2 globally. link:https://classic.yarnpkg.com/en/docs/install[doc]
 ----
 $ # using package manager (apt, pacman, homebrew, .etc)
 $ apt-get install yarn
+----
 
-$ # using npm
-$
+Or simply set an alias
+----
+$ # at project root
+$ alias yarn="node $(pwd)/.yarn/releases/yarn-berry.js"
 ----
 
 Run `yarn`
 ----
+$ # at project root
 $ yarn
 ----
