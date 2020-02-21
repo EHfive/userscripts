@@ -7,5 +7,10 @@
   "workspaces": [
     "packages/*",
     "userscripts/*"
-  ]
+  ],
+  "dependenciesMeta": {
+    "webpack-dev-server": {
+      "unplugged": true
+    }
+  }
 }
