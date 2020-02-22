@@ -1,4 +1,4 @@
-import rawScript from '../vender/gm4-polyfill/gm4-polyfill.js'
+import rawScript from '../vendor/gm4-polyfill/gm4-polyfill.js'
 
 (function f() {
   eval(rawScript)
