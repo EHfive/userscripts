@@ -1,20 +1,12 @@
 const _global = (typeof unsafeWindow === 'object' && unsafeWindow) || globalThis
 
-function sleep(ms) {
-  return new Promise(resolve => {
-    setTimeout(resolve, ms)
-  })
-}
-
-async function test() {
-  console.log('start sleeping')
-  await sleep(2000)
-  console.log('end sleeping')
+if(typeof unsafeWindow === 'object' && unsafeWindow) {
+  unsafeWindow.$_GM = window
+  window.$_GM = window
 }
 
 function main() {
-  test()
-  console.log(_global)
+  console.log($_GM)
   document.body.style.background = 'blue'
 }
 
