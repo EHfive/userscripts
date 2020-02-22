@@ -2,7 +2,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /vender\/.*\.js$/,
+        test: /vendor\/.*\.js$/,
         use: require.resolve('raw-loader')
       }
     ]
