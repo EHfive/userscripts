@@ -6,6 +6,14 @@ const { isDev } = require('./utils')
 const HOST = process.env.HOST || 'localhost'
 const PORT = process.env.PORT || 9000
 
+const BASE_URL = `https://${HOST}:${PORT}/`
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+  "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+}
+
 module.exports = {
   mode: isDev ? 'development' : 'production',
   entry: require.resolve('./src/index.js'),
@@ -13,11 +21,14 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.user.js',
-    globalObject: "this"
+    globalObject: "this",
+    publicPath: BASE_URL,
+    jsonpFunction: "userscriptJsonpFunction"
   },
   devServer: {
     port: PORT,
     https: true,
+    headers: corsHeaders,
     disableHostCheck: true,
     contentBase: path.join(__dirname, 'dist'),
     compress: false,
@@ -49,7 +60,7 @@ module.exports = {
     new WebpackUserscript({
       headers: require.resolve('./header.js'),
       proxyScript: {
-        baseUrl: `https://${HOST}:${PORT}`,
+        baseUrl: BASE_URL,
         filename: '[basename].proxy.user.js',
         enable: isDev
       }

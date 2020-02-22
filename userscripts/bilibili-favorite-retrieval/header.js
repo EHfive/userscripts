@@ -8,7 +8,10 @@ module.exports = function (data) {
     ],
     grant: [
       'unsafeWindow',
-      'GM_xmlhttpRequest'
+      'GM_info',
+      'GM.info',
+      'GM_xmlhttpRequest',
+      'GM.xmlhttpRequest',
     ]
   }
 }

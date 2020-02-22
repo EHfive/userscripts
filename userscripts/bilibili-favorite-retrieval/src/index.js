@@ -1,3 +1,4 @@
+import '@userscripts/polyfills'
 import main from './main'
 
 main()

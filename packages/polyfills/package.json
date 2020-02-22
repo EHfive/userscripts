@@ -1,3 +1,12 @@
 {
-  "name": "polyfills"
+  "name": "@userscripts/polyfills",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepublish": "webpack-cli --mode production -o dist/index.js"
+  },
+  "devDependencies": {
+    "raw-loader": "^4.0.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  }
 }

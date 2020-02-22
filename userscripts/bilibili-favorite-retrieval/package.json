@@ -10,6 +10,7 @@
     "serve": "node scripts/serve.js"
   },
   "dependencies": {
+    "@userscripts/polyfills": "workspace:*",
     "core-js": "^3.6.4",
     "regenerator-runtime": "^0.13.3"
   },
