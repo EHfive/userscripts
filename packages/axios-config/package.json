@@ -1,0 +1,10 @@
+{
+  "name": "@userscripts/axios-config",
+  "main": "lib/index.js",
+  "dependencies": {
+    "axios-gmxhr-adapter": "^0.15.3"
+  },
+  "peerDependencies": {
+    "axios": "^0.19.2"
+  }
+}

@@ -1009,7 +1009,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@userscripts/polyfills@workspace:*, @userscripts/polyfills@workspace:packages/polyfills":
+"@userscripts/axios-config@workspace:packages/axios-config":
+  version: 0.0.0-use.local
+  resolution: "@userscripts/axios-config@workspace:packages/axios-config"
+  dependencies:
+    axios-gmxhr-adapter: ^0.15.3
+  peerDependencies:
+    axios: ^0.19.2
+  languageName: unknown
+  linkType: soft
+
+"@userscripts/polyfills@workspace:packages/polyfills":
   version: 0.0.0-use.local
   resolution: "@userscripts/polyfills@workspace:packages/polyfills"
   dependencies:
@@ -1499,6 +1509,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios-gmxhr-adapter@npm:^0.15.3":
+  version: 0.15.3
+  resolution: "axios-gmxhr-adapter@npm:0.15.3"
+  dependencies:
+    gmxhr: ^1.0.0
+  checksum: 2/b04e53ae7fbf2725116015d34731e789a4ccebaec412b4993a32f7d76ed999dfaa5c854148a38c62e0bba37df93a61845e524b75372479f2eb3c591dc4b9b9b0
+  languageName: node
+  linkType: hard
+
+"axios@npm:^0.19.2":
+  version: 0.19.2
+  resolution: "axios@npm:0.19.2"
+  dependencies:
+    follow-redirects: 1.5.10
+  checksum: 2/bad346deea24050f9953ce09bb8015f85a99a7b8f016806adccfab0b8981827d1fbee9c77c0ef7c70cc48392c1af6bbc65e07c3e88221d17282d2d5fd0a191f6
+  languageName: node
+  linkType: hard
+
 "babel-loader@npm:^8.0.6":
   version: 8.0.6
   resolution: "babel-loader@npm:8.0.6"
@@ -1581,7 +1609,9 @@ __metadata:
   dependencies:
     "@babel/core": ^7.8.4
     "@babel/preset-env": ^7.8.4
-    "@userscripts/polyfills": "workspace:*"
+    "@userscripts/axios-config": "workspace:packages/axios-config"
+    "@userscripts/polyfills": "workspace:packages/polyfills"
+    axios: ^0.19.2
     babel-loader: ^8.0.6
     core-js: ^3.6.4
     cross-env: ^7.0.0
@@ -2318,6 +2348,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"debug@npm:=3.1.0":
+  version: 3.1.0
+  resolution: "debug@npm:3.1.0"
+  dependencies:
+    ms: 2.0.0
+  checksum: 2/1295acd5e0531761255661d325cd0a80ac8c5f6de8942a53bb23c2197ccb97526972de662ed0e5d9393be83f3428a298a6e7185ecb02f0da6282019cd2ffb4a8
+  languageName: node
+  linkType: hard
+
 "debug@npm:^3.0.0, debug@npm:^3.1.1, debug@npm:^3.2.5, debug@npm:^3.2.6":
   version: 3.2.6
   resolution: "debug@npm:3.2.6"
@@ -3032,6 +3071,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"follow-redirects@npm:1.5.10":
+  version: 1.5.10
+  resolution: "follow-redirects@npm:1.5.10"
+  dependencies:
+    debug: =3.1.0
+  checksum: 2/6e58e02c31337b6b41ffc3d5f3d49920b7db428eddcf374537da00ef121fe473983e12d8557f4304287604168d3efcc288d1f009abaf4c9d61e5db0c0cee3c4a
+  languageName: node
+  linkType: hard
+
 "follow-redirects@npm:^1.0.0":
   version: 1.10.0
   resolution: "follow-redirects@npm:1.10.0"
@@ -3305,6 +3353,13 @@ fsevents@^1.2.7:
     pify: ^2.0.0
     pinkie-promise: ^2.0.0
   checksum: 2/7acac933247f203624c502e6db54995d355ae2ce618be40a6a125c73bac9fa1bb775cf2b0959d92807605534f7b29cf711bc354febb8a6dc2ecbaa1cbf59efa5
+  languageName: node
+  linkType: hard
+
+"gmxhr@npm:^1.0.0":
+  version: 1.1.1
+  resolution: "gmxhr@npm:1.1.1"
+  checksum: 2/ace51512e3488c8cac5641b048626593311a52a6661a5a0735ac39299da4798d91ba52ce498429fbf67c4e5c5655c383012574f236e9bf7b59644047fd324594
   languageName: node
   linkType: hard
 

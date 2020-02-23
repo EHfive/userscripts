@@ -23,6 +23,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:."
       },
       {
+        "name": "@userscripts/axios-config",
+        "reference": "workspace:packages/axios-config"
+      },
+      {
         "name": "@userscripts/polyfills",
         "reference": "workspace:packages/polyfills"
       },
@@ -34,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.vscode\\/pnpify(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$)",
     "fallbackExclusionList": [
+      ["@userscripts/axios-config", ["virtual:1a9fc1ab275a485ad4ae623dc43ff5c3d31f8394d8195f40d7db230d0d12df9917f603e0f33e9c70a3c9e538d2f2a4dcc9462daea3e9e47a8358b0e841ff5264#workspace:packages/axios-config", "workspace:packages/axios-config"]],
       ["@userscripts/polyfills", ["workspace:packages/polyfills"]],
       ["bilibili-favorite-retrieval", ["workspace:userscripts/bilibili-favorite-retrieval"]],
       ["userscripts", ["workspace:."]]
@@ -1242,6 +1247,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@userscripts/axios-config", [
+        ["virtual:1a9fc1ab275a485ad4ae623dc43ff5c3d31f8394d8195f40d7db230d0d12df9917f603e0f33e9c70a3c9e538d2f2a4dcc9462daea3e9e47a8358b0e841ff5264#workspace:packages/axios-config", {
+          "packageLocation": "./.yarn/$$virtual/@userscripts-axios-config-virtual-45b77dbf0a/1/packages/axios-config/",
+          "packageDependencies": [
+            ["@userscripts/axios-config", "virtual:1a9fc1ab275a485ad4ae623dc43ff5c3d31f8394d8195f40d7db230d0d12df9917f603e0f33e9c70a3c9e538d2f2a4dcc9462daea3e9e47a8358b0e841ff5264#workspace:packages/axios-config"],
+            ["axios", "npm:0.19.2"],
+            ["axios-gmxhr-adapter", "npm:0.15.3"]
+          ],
+          "packagePeers": [
+            "axios"
+          ],
+          "linkType": "SOFT",
+        }],
+        ["workspace:packages/axios-config", {
+          "packageLocation": "./packages/axios-config/",
+          "packageDependencies": [
+            ["@userscripts/axios-config", "workspace:packages/axios-config"],
+            ["axios", null],
+            ["axios-gmxhr-adapter", "npm:0.15.3"]
+          ],
+          "packagePeers": [
+            "axios"
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
       ["@userscripts/polyfills", [
         ["workspace:packages/polyfills", {
           "packageLocation": "./packages/polyfills/",
@@ -1825,6 +1856,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["axios", [
+        ["npm:0.19.2", {
+          "packageLocation": "./.yarn/cache/axios-npm-0.19.2-e4e8599895-2.zip/node_modules/axios/",
+          "packageDependencies": [
+            ["axios", "npm:0.19.2"],
+            ["follow-redirects", "npm:1.5.10"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["axios-gmxhr-adapter", [
+        ["npm:0.15.3", {
+          "packageLocation": "./.yarn/cache/axios-gmxhr-adapter-npm-0.15.3-b8d31e20d8-2.zip/node_modules/axios-gmxhr-adapter/",
+          "packageDependencies": [
+            ["axios-gmxhr-adapter", "npm:0.15.3"],
+            ["gmxhr", "npm:1.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["babel-loader", [
         ["virtual:1a9fc1ab275a485ad4ae623dc43ff5c3d31f8394d8195f40d7db230d0d12df9917f603e0f33e9c70a3c9e538d2f2a4dcc9462daea3e9e47a8358b0e841ff5264#npm:8.0.6", {
           "packageLocation": "./.yarn/$$virtual/babel-loader-virtual-4deb151241/0/cache/babel-loader-npm-8.0.6-ccc68d8d38-2.zip/node_modules/babel-loader/",
@@ -1923,7 +1974,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["bilibili-favorite-retrieval", "workspace:userscripts/bilibili-favorite-retrieval"],
             ["@babel/core", "npm:7.8.4"],
             ["@babel/preset-env", "virtual:1a9fc1ab275a485ad4ae623dc43ff5c3d31f8394d8195f40d7db230d0d12df9917f603e0f33e9c70a3c9e538d2f2a4dcc9462daea3e9e47a8358b0e841ff5264#npm:7.8.4"],
+            ["@userscripts/axios-config", "virtual:1a9fc1ab275a485ad4ae623dc43ff5c3d31f8394d8195f40d7db230d0d12df9917f603e0f33e9c70a3c9e538d2f2a4dcc9462daea3e9e47a8358b0e841ff5264#workspace:packages/axios-config"],
             ["@userscripts/polyfills", "workspace:packages/polyfills"],
+            ["axios", "npm:0.19.2"],
             ["babel-loader", "virtual:1a9fc1ab275a485ad4ae623dc43ff5c3d31f8394d8195f40d7db230d0d12df9917f603e0f33e9c70a3c9e538d2f2a4dcc9462daea3e9e47a8358b0e841ff5264#npm:8.0.6"],
             ["core-js", "npm:3.6.4"],
             ["cross-env", "npm:7.0.0"],
@@ -2777,6 +2830,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+        ["virtual:bde6f435769d1a96c3f371d2e8a88314847816fb841f758b3628da60329c36f988ca42f6984dc53bb31dd306522878e1e5d568caeca7af42e4f19b238d6261b3#npm:3.1.0", {
+          "packageLocation": "./.yarn/$$virtual/debug-virtual-f2284580f9/0/cache/debug-npm-3.1.0-9f0accb99b-2.zip/node_modules/debug/",
+          "packageDependencies": [
+            ["debug", "virtual:bde6f435769d1a96c3f371d2e8a88314847816fb841f758b3628da60329c36f988ca42f6984dc53bb31dd306522878e1e5d568caeca7af42e4f19b238d6261b3#npm:3.1.0"],
+            ["ms", "npm:2.0.0"],
+            ["supports-color", null]
+          ],
+          "packagePeers": [
+            "supports-color"
+          ],
+          "linkType": "HARD",
+        }],
         ["virtual:f77efe75d23dbd674e35a35bb68b36aeea1ab47db674ef099539f7475cd575bcaac8c88b7f834a37f455c8523415d9c7b29fe0d6fdad7d1e6d0aaca56335578b#npm:3.2.6", {
           "packageLocation": "./.yarn/$$virtual/debug-virtual-d3fb926691/0/cache/debug-npm-3.2.6-6214e40f12-2.zip/node_modules/debug/",
           "packageDependencies": [
@@ -3583,6 +3648,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:f77efe75d23dbd674e35a35bb68b36aeea1ab47db674ef099539f7475cd575bcaac8c88b7f834a37f455c8523415d9c7b29fe0d6fdad7d1e6d0aaca56335578b#npm:3.2.6"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:1.5.10", {
+          "packageLocation": "./.yarn/cache/follow-redirects-npm-1.5.10-bde6f43576-2.zip/node_modules/follow-redirects/",
+          "packageDependencies": [
+            ["follow-redirects", "npm:1.5.10"],
+            ["debug", "virtual:bde6f435769d1a96c3f371d2e8a88314847816fb841f758b3628da60329c36f988ca42f6984dc53bb31dd306522878e1e5d568caeca7af42e4f19b238d6261b3#npm:3.1.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["for-in", [
@@ -3868,6 +3941,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["object-assign", "npm:4.1.1"],
             ["pify", "npm:2.3.0"],
             ["pinkie-promise", "npm:2.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["gmxhr", [
+        ["npm:1.1.1", {
+          "packageLocation": "./.yarn/cache/gmxhr-npm-1.1.1-0276003ed6-2.zip/node_modules/gmxhr/",
+          "packageDependencies": [
+            ["gmxhr", "npm:1.1.1"]
           ],
           "linkType": "HARD",
         }]
