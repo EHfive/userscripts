@@ -1,7 +1,9 @@
 // ==UserScript==
 // @name    bilibili-favorite-retrieval
 // @version 0.1.0
-// @include /^https?://space.bilibili.com/[0-9]+/favlist.*$/
+// @run-at  document-body
+// @include /^https?:\/\/space.bilibili.com\/[0-9]+(\/.*$|$)/
+// @connect *
 // @grant   unsafeWindow
 // @grant   GM_info
 // @grant   GM.info
