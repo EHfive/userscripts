@@ -1,0 +1,31 @@
+{
+  "name": "enable-vue-devtools",
+  "main": "dist/index.js",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server",
+    "watch": "cross-env NODE_ENV=development webpack-cli -w",
+    "build": "cross-env NODE_ENV=production webpack-cli",
+    "build:dev": "cross-env NODE_ENV=development webpack-cli"
+  },
+  "dependencies": {
+    "@userscripts/polyfills": "workspace:packages/polyfills",
+    "consola": "^2.11.3",
+    "core-js": "^3.6.4",
+    "regenerator-runtime": "^0.13.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^7.0.0",
+    "pnp-webpack-plugin": "^1.6.4",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-userscript": "^2.5.1"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}

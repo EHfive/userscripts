@@ -33,6 +33,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "bilibili-favorite-retrieval",
         "reference": "workspace:userscripts/bilibili-favorite-retrieval"
+      },
+      {
+        "name": "enable-vue-devtools",
+        "reference": "workspace:userscripts/enbale-vue-devtools"
       }
     ],
     "enableTopLevelFallback": true,
@@ -41,6 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@userscripts/axios-config", ["virtual:1a9fc1ab275a485ad4ae623dc43ff5c3d31f8394d8195f40d7db230d0d12df9917f603e0f33e9c70a3c9e538d2f2a4dcc9462daea3e9e47a8358b0e841ff5264#workspace:packages/axios-config", "workspace:packages/axios-config"]],
       ["@userscripts/polyfills", ["workspace:packages/polyfills"]],
       ["bilibili-favorite-retrieval", ["workspace:userscripts/bilibili-favorite-retrieval"]],
+      ["enable-vue-devtools", ["workspace:userscripts/enbale-vue-devtools"]],
       ["userscripts", ["workspace:."]]
     ],
     "locationBlacklistData": [
@@ -2553,6 +2558,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["consola", [
+        ["npm:2.11.3", {
+          "packageLocation": "./.yarn/cache/consola-npm-2.11.3-2c0a057b45-2.zip/node_modules/consola/",
+          "packageDependencies": [
+            ["consola", "npm:2.11.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["console-browserify", [
         ["npm:1.2.0", {
           "packageLocation": "./.yarn/cache/console-browserify-npm-1.2.0-5619eeb6ff-2.zip/node_modules/console-browserify/",
@@ -3176,6 +3190,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["emojis-list", "npm:3.0.0"]
           ],
           "linkType": "HARD",
+        }]
+      ]],
+      ["enable-vue-devtools", [
+        ["workspace:userscripts/enbale-vue-devtools", {
+          "packageLocation": "./userscripts/enbale-vue-devtools/",
+          "packageDependencies": [
+            ["enable-vue-devtools", "workspace:userscripts/enbale-vue-devtools"],
+            ["@babel/core", "npm:7.8.4"],
+            ["@babel/preset-env", "virtual:1a9fc1ab275a485ad4ae623dc43ff5c3d31f8394d8195f40d7db230d0d12df9917f603e0f33e9c70a3c9e538d2f2a4dcc9462daea3e9e47a8358b0e841ff5264#npm:7.8.4"],
+            ["@userscripts/polyfills", "workspace:packages/polyfills"],
+            ["babel-loader", "virtual:1a9fc1ab275a485ad4ae623dc43ff5c3d31f8394d8195f40d7db230d0d12df9917f603e0f33e9c70a3c9e538d2f2a4dcc9462daea3e9e47a8358b0e841ff5264#npm:8.0.6"],
+            ["consola", "npm:2.11.3"],
+            ["core-js", "npm:3.6.4"],
+            ["cross-env", "npm:7.0.0"],
+            ["pnp-webpack-plugin", "npm:1.6.4"],
+            ["regenerator-runtime", "npm:0.13.3"],
+            ["webpack", "npm:4.41.6"],
+            ["webpack-cli", "virtual:5b54371d8d17f82b24752e5347857380ade645329ee67bf92450a99c9328dec1fd21093e6a88ceb87ed2169e249d4fc2625aa28f70490d52d40603aec15a78bb#npm:3.3.11"],
+            ["webpack-dev-server", "virtual:1a9fc1ab275a485ad4ae623dc43ff5c3d31f8394d8195f40d7db230d0d12df9917f603e0f33e9c70a3c9e538d2f2a4dcc9462daea3e9e47a8358b0e841ff5264#npm:3.10.3"],
+            ["webpack-userscript", "virtual:1a9fc1ab275a485ad4ae623dc43ff5c3d31f8394d8195f40d7db230d0d12df9917f603e0f33e9c70a3c9e538d2f2a4dcc9462daea3e9e47a8358b0e841ff5264#npm:2.5.1"]
+          ],
+          "linkType": "SOFT",
         }]
       ]],
       ["encodeurl", [

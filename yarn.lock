@@ -2126,6 +2126,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"consola@npm:^2.11.3":
+  version: 2.11.3
+  resolution: "consola@npm:2.11.3"
+  checksum: 2/44d70b208dda0d220d54a9f4521dc86241a67413f7b7338273815894992fd7567d0ba88e3ebf36ac1f454625df836cb56d1dd733d5c2a40f9ea1f07f3669b953
+  languageName: node
+  linkType: hard
+
 "console-browserify@npm:^1.1.0":
   version: 1.2.0
   resolution: "console-browserify@npm:1.2.0"
@@ -2655,6 +2662,26 @@ __metadata:
   checksum: 2/a79126b55bc86ee8fd938235a6adf9d457c05fb5bb934e8608b7d35c878d9d1e312a67759244f5c3fba0810b508eb5617e5e6ad6886496ebcfa6832d1c8de3c4
   languageName: node
   linkType: hard
+
+"enable-vue-devtools@workspace:userscripts/enbale-vue-devtools":
+  version: 0.0.0-use.local
+  resolution: "enable-vue-devtools@workspace:userscripts/enbale-vue-devtools"
+  dependencies:
+    "@babel/core": ^7.8.4
+    "@babel/preset-env": ^7.8.4
+    "@userscripts/polyfills": "workspace:packages/polyfills"
+    babel-loader: ^8.0.6
+    consola: ^2.11.3
+    core-js: ^3.6.4
+    cross-env: ^7.0.0
+    pnp-webpack-plugin: ^1.6.4
+    regenerator-runtime: ^0.13.3
+    webpack: ^4.41.6
+    webpack-cli: ^3.3.11
+    webpack-dev-server: ^3.10.3
+    webpack-userscript: ^2.5.1
+  languageName: unknown
+  linkType: soft
 
 "encodeurl@npm:~1.0.2":
   version: 1.0.2
