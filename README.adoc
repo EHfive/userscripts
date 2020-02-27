@@ -3,6 +3,28 @@ Huang-Huang Bao <eh5@sokka.cn>
 
 Ehfive's userscripts monorepo
 
+
+|===
+|*userscripts/* | Link | Description
+
+|`enable-vue-devtools`
+|link:userscripts/enbale-vue-devtools[]
+|Force enable Vue Devtools for a Vue production build.
+|===
+
+|===
+|*packages* | Link | Description
+
+|`@userscripts/polyfills`
+| link:packages/polyfills[]
+| Greasemonkey v4 polyfill; set GM in unsafeWindow
+
+|`@userscripts/axios-config`
+| link:packages/axios-config[]
+| Helpers config axios to using `GM.xmlhttpRequest` (fallback to `XmlhttpRequest` if `GM.xmlhttpRequest` not defined)
+|===
+
+
 == Hacking
 
 TIP: This project using `link:https://github.com/yarnpkg/berry[yarn@berry]`
