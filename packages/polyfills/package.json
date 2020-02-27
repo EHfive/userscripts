@@ -5,7 +5,7 @@
     "prepublish": "webpack-cli --mode production -o dist/index.js"
   },
   "devDependencies": {
-    "raw-loader": "^4.0.0",
+    "imports-loader": "^0.8.0",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
   }

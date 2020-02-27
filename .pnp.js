@@ -1283,7 +1283,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/polyfills/",
           "packageDependencies": [
             ["@userscripts/polyfills", "workspace:packages/polyfills"],
-            ["raw-loader", "virtual:5b54371d8d17f82b24752e5347857380ade645329ee67bf92450a99c9328dec1fd21093e6a88ceb87ed2169e249d4fc2625aa28f70490d52d40603aec15a78bb#npm:4.0.0"],
+            ["imports-loader", "npm:0.8.0"],
             ["webpack", "npm:4.41.6"],
             ["webpack-cli", "virtual:5b54371d8d17f82b24752e5347857380ade645329ee67bf92450a99c9328dec1fd21093e6a88ceb87ed2169e249d4fc2625aa28f70490d52d40603aec15a78bb#npm:3.3.11"]
           ],
@@ -4321,6 +4321,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["imports-loader", [
+        ["npm:0.8.0", {
+          "packageLocation": "./.yarn/cache/imports-loader-npm-0.8.0-642880aac2-2.zip/node_modules/imports-loader/",
+          "packageDependencies": [
+            ["imports-loader", "npm:0.8.0"],
+            ["loader-utils", "npm:1.4.0"],
+            ["source-map", "npm:0.6.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["imurmurhash", [
         ["npm:0.1.4", {
           "packageLocation": "./.yarn/cache/imurmurhash-npm-0.1.4-610c5068a0-2.zip/node_modules/imurmurhash/",
@@ -6410,21 +6421,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["raw-loader", [
-        ["virtual:5b54371d8d17f82b24752e5347857380ade645329ee67bf92450a99c9328dec1fd21093e6a88ceb87ed2169e249d4fc2625aa28f70490d52d40603aec15a78bb#npm:4.0.0", {
-          "packageLocation": "./.yarn/$$virtual/raw-loader-virtual-32e9317999/0/cache/raw-loader-npm-4.0.0-d3eb573d51-2.zip/node_modules/raw-loader/",
-          "packageDependencies": [
-            ["raw-loader", "virtual:5b54371d8d17f82b24752e5347857380ade645329ee67bf92450a99c9328dec1fd21093e6a88ceb87ed2169e249d4fc2625aa28f70490d52d40603aec15a78bb#npm:4.0.0"],
-            ["loader-utils", "npm:1.3.0"],
-            ["schema-utils", "npm:2.6.4"],
-            ["webpack", "npm:4.41.6"]
-          ],
-          "packagePeers": [
-            "webpack"
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["rc", [
         ["npm:1.2.8", {
           "packageLocation": "./.yarn/cache/rc-npm-1.2.8-d6768ac936-2.zip/node_modules/rc/",
@@ -6810,15 +6806,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ajv", "npm:6.11.0"],
             ["ajv-errors", "virtual:2b49db17d1e4e8854e6e7543c07eb7bc19ec9da65a1b99b9cb28e764846d419e5ecd6e057ad65249f2b928862ffd70dbf8a7c79643ccdd7c1c40cab5b59aa03f#npm:1.0.1"],
             ["ajv-keywords", "virtual:2b49db17d1e4e8854e6e7543c07eb7bc19ec9da65a1b99b9cb28e764846d419e5ecd6e057ad65249f2b928862ffd70dbf8a7c79643ccdd7c1c40cab5b59aa03f#npm:3.4.1"]
-          ],
-          "linkType": "HARD",
-        }],
-        ["npm:2.6.4", {
-          "packageLocation": "./.yarn/cache/schema-utils-npm-2.6.4-27fad37c4f-2.zip/node_modules/schema-utils/",
-          "packageDependencies": [
-            ["schema-utils", "npm:2.6.4"],
-            ["ajv", "npm:6.11.0"],
-            ["ajv-keywords", "virtual:43ce2fdd5b200528330a6d774c97b308ac2961c751488dd9395a4aafb4146e26c6c9082dcbe65cbfbb2e650d8a36e7d373cb0d782a10c530a7c7e3dd6a1e32f8#npm:3.4.1"]
           ],
           "linkType": "HARD",
         }]

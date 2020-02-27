@@ -1023,7 +1023,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@userscripts/polyfills@workspace:packages/polyfills"
   dependencies:
-    raw-loader: ^4.0.0
+    imports-loader: ^0.8.0
     webpack: ^4.41.6
     webpack-cli: ^3.3.11
   languageName: unknown
@@ -3686,6 +3686,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"imports-loader@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "imports-loader@npm:0.8.0"
+  dependencies:
+    loader-utils: ^1.0.2
+    source-map: ^0.6.1
+  checksum: 2/a8032de3dc984a8831d94f0aa482c86e1babb43bdd690fe64315d913278bd39acf99ffb5652ec39f6230569e3d9fb03bc2b2e922d9bbb41128d0981737b2c14a
+  languageName: node
+  linkType: hard
+
 "imurmurhash@npm:^0.1.4":
   version: 0.1.4
   resolution: "imurmurhash@npm:0.1.4"
@@ -5533,18 +5543,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"raw-loader@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "raw-loader@npm:4.0.0"
-  dependencies:
-    loader-utils: ^1.2.3
-    schema-utils: ^2.5.0
-  peerDependencies:
-    webpack: ^4.0.0 || ^5.0.0
-  checksum: 2/a3f9bb528681382580bf7da66c53dd5fc95e9512c636f2abd599521da5e53e8f1f9aa52396ccd0b0ccd35db76b4fef1c41f43815b43ce7604b8552662a58e558
-  languageName: node
-  linkType: hard
-
 "rc@npm:^1.2.7":
   version: 1.2.8
   resolution: "rc@npm:1.2.8"
@@ -5897,16 +5895,6 @@ resolve@^1.3.2:
     ajv-errors: ^1.0.0
     ajv-keywords: ^3.1.0
   checksum: 2/d2f753e7a17c6054cb8c6d0806daeddac73ea2a192e452f506e50af14da1999d1435618b81a616d9f72e1606c0e46bf1870c9b429bce5d3a949d34455e6e54ff
-  languageName: node
-  linkType: hard
-
-"schema-utils@npm:^2.5.0":
-  version: 2.6.4
-  resolution: "schema-utils@npm:2.6.4"
-  dependencies:
-    ajv: ^6.10.2
-    ajv-keywords: ^3.4.1
-  checksum: 2/26d3184dc7f6f95f5cacf58c4fffb7c44854d974831670e76df8e97f47aa147e6f76f89d4bc96890c7d24bba3f9dad2982f976c87fd56edf8192b9234b8bc828
   languageName: node
   linkType: hard
 
@@ -6805,6 +6793,8 @@ resolve@^1.3.2:
   version: 0.0.0-use.local
   resolution: "userscripts@workspace:."
   dependenciesMeta:
+    core-js:
+      unplugged: true
     webpack-dev-server:
       unplugged: true
   languageName: unknown

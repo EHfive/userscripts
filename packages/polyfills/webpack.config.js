@@ -3,7 +3,12 @@ module.exports = {
     rules: [
       {
         test: /vendor\/.*\.js$/,
-        use: require.resolve('raw-loader')
+        use: {
+          loader: require.resolve('imports-loader'),
+          options: {
+            this: '>window'
+          }
+        }
       }
     ]
   }
