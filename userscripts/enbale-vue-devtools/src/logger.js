@@ -1,14 +1,17 @@
 import Consola from 'consola/src/consola'
 import BrowserReporter from 'consola/src/reporters/browser'
-import pkg from '../package'
-
+import preval from 'preval.macro'
+const pkgName = preval`
+  const pkg = require('../package.json');
+  module.exports = pkg.name
+`;
 const logger = new Consola({
   reporters: [
     new BrowserReporter()
   ],
   defaults: {
-    tag: pkg.name
+    tag: pkgName
   }
-})
+});
 
 export default logger

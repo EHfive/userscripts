@@ -50,10 +50,13 @@ module.exports = {
     rules: [
       {
         test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
         use: {
           loader: require.resolve('babel-loader')
-        }
+        },
+        exclude: [
+          /node_modules\/(?!(consola)\/).*/,
+          /userscripts\/packages\/polyfills.*/
+        ]
       }
     ]
   },

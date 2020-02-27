@@ -1,6 +1,7 @@
 const isDev = require('./utils').isDev
 
 module.exports = function (data) {
+  const {author} = data
   return {
     version: isDev ? `[version]-build.[buildTime].no[buildNo]` : `[version]`,
     'run-at': 'document-start',
