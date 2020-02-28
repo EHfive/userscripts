@@ -26,6 +26,9 @@ function emitDevtoolHooks(app) {
   }
   Vue.config.devtools = true;
   logger.info('enabling devtools for Vue instance', app);
+  // must re-emit 'init' if this Vue is different with other Vue(s)
+  // otherwise this `Vue`'s root instance would not be added to Devtools store
+  // https://github.com/vuejs/vue-devtools/blob/933063fd06860464be4bfd8c83ba09d7fc2c753e/packages/app-backend/src/index.js#L218-L225
   _devtoolHook.emit('init', Vue);
   // TODO validate Vuex instance
   if (store) {
