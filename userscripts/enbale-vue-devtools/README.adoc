@@ -3,6 +3,7 @@
 Force enable Vue Devtools for a Vue production build.
 
 == Usage
+
 Install & enable link:dist/enable-vue-devtools.user.js/[enable-vue-devtools.user.js] in link:https://www.tampermonkey.net[Tampermonkey] browser extension;
 
 Open firefox/chrome/other browsers devtools panel.

@@ -1,5 +1,5 @@
 const path = require('path')
-const PnpWebpackPlugin = require(`pnp-webpack-plugin`);
+const PnpWebpackPlugin = require(`pnp-webpack-plugin`)
 const WebpackUserscript = require('webpack-userscript')
 const { isDev } = require('./utils')
 const pkg = require('./package')
