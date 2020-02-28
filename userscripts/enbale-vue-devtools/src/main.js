@@ -18,8 +18,12 @@ function main() {
 }
 
 function emitDevtoolHooks(app) {
-  const Vue = app.constructor;
+  let Vue = app.constructor;
   const store = app.$store;
+  while (Vue.super) {
+    // find base Vue
+    Vue = Vue.super
+  }
   Vue.config.devtools = true;
   logger.info('enabling devtools for Vue instance', app);
   _devtoolHook.emit('init', Vue);
