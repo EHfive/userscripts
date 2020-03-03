@@ -66,7 +66,11 @@ function observeVueRoot(callback) {
       }
     }
   );
-  observer.observe(document.documentElement, {subtree: true, childList: true});
+  observer.observe(document.documentElement, {
+    attributes: true,
+    subtree: true,
+    childList: true
+  });
   return observer
 }
 
