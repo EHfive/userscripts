@@ -38,7 +38,7 @@ $ apt-get install yarn
 Or simply set an alias
 ----
 $ # at project root
-$ alias yarn="node $(pwd)/.yarn/releases/yarn-berry.js"
+$ alias yarn="node \"$(pwd)/.yarn/releases/yarn-berry.js\""
 ----
 
 Run `yarn`
