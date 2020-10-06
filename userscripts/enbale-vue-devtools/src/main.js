@@ -12,12 +12,17 @@ function main() {
     logger.warn('No Vue Devtools hook found', _global.location);
     return
   }
-  observeVueRoot(function (app, disconnect) {
-    emitDevtoolHooks(app);
-  });
+  observeVueRoot(
+    function (app, disconnect) {
+      emitDevtoolVue2Hooks(app);
+    },
+    function (app, disconnect) {
+      emitDevtoolVue3Hooks(app);
+    }
+  );
 }
 
-function emitDevtoolHooks(app) {
+function emitDevtoolVue2Hooks(app) {
   let Vue = app.constructor;
   const store = app.$store;
   while (Vue.super) {
@@ -37,7 +42,35 @@ function emitDevtoolHooks(app) {
   }
 }
 
-function checkVueInstance(vue) {
+function emitDevtoolVue3Hooks(app) {
+  if (!Array.isArray(_devtoolHook.apps)) return;
+  if (_devtoolHook.apps.includes(app)) return;
+  let version = app.version;
+  if (!version) {
+    logger.warn('no Vue version detected, fallback to "3.0.0"')
+    version = '3.0.0';
+  }
+  logger.info('enabling devtools for Vue 3 instance', app);
+
+  // FIXME: impossible to get those Symbols,
+  // https://github.com/vuejs/vue-next/blob/410e7abbbb78e83989ad2e5a1793c290129dfdc7/packages/runtime-core/src/devtools.ts#L38
+  const types = {
+    Fragment: undefined,
+    Text: undefined,
+    Comment: undefined,
+    Static: undefined
+  }
+  _devtoolHook.emit('app:init', app, version, types);
+
+  const unmount = app.unmount.bind(app);
+  app.unmount = function () {
+    _devtoolHook.emit('app:unmount', app);
+    unmount();
+  }
+}
+
+function checkVue2Instance(target) {
+  const vue = target && target.__vue__
   return !!(
     vue
     && (typeof vue === 'object')
@@ -46,22 +79,46 @@ function checkVueInstance(vue) {
   )
 }
 
-function observeVueRoot(callback) {
-  const vueRootSet = new WeakSet();
+function checkVue3Instance(target) {
+  const app = target && target.__vue_app__
+  return !!app
+}
+
+function noop() {
+}
+
+function observeVueRoot(callbackVue2, callbackVue3) {
+  if (typeof callbackVue2 !== 'function') {
+    callbackVue2 = noop
+  }
+  if (typeof callbackVue3 !== 'function') {
+    callbackVue3 = noop
+  }
+  const vue2RootSet = new WeakSet();
+  const vue3RootSet = new WeakSet();
   const observer = new MutationObserver(
     (mutations, observer) => {
+      const disconnect = observer.disconnect.bind(observer);
       for (const {target} of mutations) {
-        if (target && checkVueInstance(target.__vue__)) {
+        if (!target) {
+          return
+        } else if (checkVue2Instance(target)) {
           const inst = target.__vue__;
           const root = inst.$parent ? inst.$root : inst;
-          if (vueRootSet.has(root)) {
+          if (vue2RootSet.has(root)) {
             // already callback, continue loop
             continue
           }
-          vueRootSet.add(root);
-          if (typeof callback === 'function') {
-            callback(root, observer.disconnect.bind(observer));
+          vue2RootSet.add(root);
+          callbackVue2(root, disconnect);
+        } else if (checkVue3Instance(target)) {
+          const app = target.__vue_app__;
+          if (vue3RootSet.has(app)) {
+            // already callback, continue loop
+            continue
           }
+          vue3RootSet.add(app);
+          callbackVue3(app, disconnect);
         }
       }
     }

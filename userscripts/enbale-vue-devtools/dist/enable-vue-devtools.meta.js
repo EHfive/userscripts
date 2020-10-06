@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name              Force Enable Vue Devtools
-// @version           0.1.5
+// @version           0.2.0
 // @author            Huang-Huang Bao <eh5@sokka.cn> (https://github.com/EHfive)
 // @description       Force enable Vue Devtools for a Vue production build.
 // @homepage          https://github.com/EHfive/userscripts/tree/master/userscripts/enbale-vue-devtools
@@ -14,6 +14,7 @@
 // @updateURL         https://github.com/EHfive/userscripts/raw/master/userscripts/enbale-vue-devtools/dist/enable-vue-devtools.meta.js
 // @downloadURL       https://github.com/EHfive/userscripts/raw/master/userscripts/enbale-vue-devtools/dist/enable-vue-devtools.user.js
 // @run-at            document-start
+// @noframes          
 // @include           /^.*$/
 // @grant             unsafeWindow
 // @grant             GM_info

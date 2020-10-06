@@ -14,6 +14,7 @@ module.exports = function (data) {
     updateURL: 'https://github.com/EHfive/userscripts/raw/master/userscripts/enbale-vue-devtools/dist/enable-vue-devtools.meta.js',
     downloadURL: 'https://github.com/EHfive/userscripts/raw/master/userscripts/enbale-vue-devtools/dist/enable-vue-devtools.user.js',
     'run-at': 'document-start',
+    noframes: true,
     include: [
       /^.*$/
     ].map(reg => reg.toString()),
