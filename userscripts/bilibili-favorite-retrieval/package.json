@@ -12,20 +12,20 @@
   "dependencies": {
     "@userscripts/axios-config": "workspace:packages/axios-config",
     "@userscripts/polyfills": "workspace:packages/polyfills",
-    "axios": "^0.19.2",
-    "core-js": "^3.6.4",
-    "regenerator-runtime": "^0.13.3"
+    "axios": "^0.20.0",
+    "core-js": "^3.6.5",
+    "regenerator-runtime": "^0.13.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/preset-env": "^7.8.4",
-    "babel-loader": "^8.0.6",
-    "cross-env": "^7.0.0",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
     "pnp-webpack-plugin": "^1.6.4",
-    "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3",
-    "webpack-userscript": "^2.5.1"
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-userscript": "^2.5.6"
   },
   "browserslist": [
     "defaults"

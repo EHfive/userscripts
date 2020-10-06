@@ -6,7 +6,7 @@ module.exports = {
         use: {
           loader: require.resolve('imports-loader'),
           options: {
-            this: '>window'
+            wrapper: 'window'
           }
         }
       }
