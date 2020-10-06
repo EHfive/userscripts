@@ -1,12 +1,12 @@
 {
   "name": "enable-vue-devtools",
   "main": "dist/index.js",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Huang-Huang Bao <eh5@sokka.cn> (https://github.com/EHfive)",
   "homepage": "https://github.com/EHfive/userscripts/tree/master/userscripts/enbale-vue-devtools",
   "bugs": "https://github.com/EHfive/userscripts/issues",
   "license": "MIT",
-  "description": "Force enable Vue Devtools for a Vue production build.",
+  "description": "Force enable Vue Devtools for any Vue2 or Vue3 production build.",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server",
     "watch": "cross-env NODE_ENV=development webpack-cli -w",

@@ -1,6 +1,6 @@
 # enable-vue-devtools
 
-Force enable Vue Devtools for any Vue2 & Vue3 production builds.
+Force enable Vue Devtools for any Vue2 or Vue3 production build.
 
 ## Installation
 
