@@ -1,7 +1,7 @@
 {
   "presets": [
     ["@babel/preset-env", {
-      "useBuiltIns": "usage",
+      "useBuiltIns": false,
       "corejs": { "version": 3, "proposals": true },
       "shippedProposals": true
     }]

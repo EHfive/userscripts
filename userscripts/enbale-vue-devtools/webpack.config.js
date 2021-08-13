@@ -26,6 +26,9 @@ module.exports = {
     publicPath: BASE_URL,
     jsonpFunction: "userscriptJsonpFunction"
   },
+  optimization: {
+    minimize: false
+  },
   devServer: {
     port: PORT,
     https: true,

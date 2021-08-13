@@ -3016,7 +3016,6 @@ __metadata:
     babel-loader: ^8.1.0
     babel-plugin-macros: ^2.8.0
     consola: ^2.15.0
-    core-js: ^3.6.5
     cross-env: ^7.0.2
     pnp-webpack-plugin: ^1.6.4
     preval.macro: ^5.0.0

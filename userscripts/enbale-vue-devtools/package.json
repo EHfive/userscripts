@@ -1,7 +1,7 @@
 {
   "name": "enable-vue-devtools",
   "main": "dist/index.js",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Huang-Huang Bao <eh5@sokka.cn> (https://github.com/EHfive)",
   "homepage": "https://github.com/EHfive/userscripts/tree/master/userscripts/enbale-vue-devtools",
   "bugs": "https://github.com/EHfive/userscripts/issues",
@@ -16,7 +16,6 @@
   "dependencies": {
     "@userscripts/polyfills": "workspace:packages/polyfills",
     "consola": "^2.15.0",
-    "core-js": "^3.6.5",
     "regenerator-runtime": "^0.13.7"
   },
   "devDependencies": {
@@ -33,6 +32,6 @@
     "webpack-userscript": "^2.5.6"
   },
   "browserslist": [
-    "defaults"
+    "last 2 years"
   ]
 }

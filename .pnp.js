@@ -3726,7 +3726,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-loader", "virtual:6c5dfffbdfb1802873bda92476da1aa4f26a7a57417e378774a0e29d21b13acddb4b21078163d73bb9dd55c3597df6ee0e54bc83eec271262d6cc5940a4d7a4c#npm:8.1.0"],
             ["babel-plugin-macros", "npm:2.8.0"],
             ["consola", "npm:2.15.0"],
-            ["core-js", "npm:3.6.5"],
             ["cross-env", "npm:7.0.2"],
             ["pnp-webpack-plugin", "npm:1.6.4"],
             ["preval.macro", "npm:5.0.0"],
