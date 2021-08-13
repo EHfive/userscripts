@@ -1,7 +1,7 @@
 {
   "name": "enable-vue-devtools",
   "main": "dist/index.js",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "author": "Huang-Huang Bao <eh5@sokka.cn> (https://github.com/EHfive)",
   "homepage": "https://github.com/EHfive/userscripts/tree/master/userscripts/enbale-vue-devtools",
   "bugs": "https://github.com/EHfive/userscripts/issues",

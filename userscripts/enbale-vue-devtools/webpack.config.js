@@ -23,7 +23,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: `${pkg.name}.user.js`,
     globalObject: "this",
-    publicPath: BASE_URL,
+    publicPath: isDev ? BASE_URL : '',
     jsonpFunction: "userscriptJsonpFunction"
   },
   optimization: {
